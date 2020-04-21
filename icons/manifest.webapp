@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "name": "Steun de brouwer",
+  "description": "Steun de brouwer",
+  "icons": {
+    "60": "/steundebrouwer/icons/firefox_app_60x60.png",
+    "128": "/steundebrouwer/icons/firefox_app_128x128.png",
+    "512": "/steundebrouwer/icons/firefox_app_512x512.png"
+  },
+  "developer": {
+    "name": "disjfa",
+    "url": "https://disjfa.github.io/"
+  }
+}

@@ -1,0 +1,32 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+        <a class="navbar-brand" href="{{ '/' | url }}" aria-label="brouwers Zoetermeer">
+            <img src="{{ "/images/logo.png" | url }}" alt="Steun de brouwer">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="main-navbar">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link{% if page.url === '/over-ons/' %} active{% endif %}" href="{{ "/over-ons/" | url }}">
+                        Over ons
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link{% if page.url === '/contact/' %} active{% endif %}" href="{{ "/contact/" | url }}">
+                        Contact
+                    </a>
+                </li>
+            </ul>
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="https://www.instagram.com/steundebrouwer/" aria-label="instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+

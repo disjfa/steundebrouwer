@@ -1,0 +1,43 @@
+---
+layout: layouts/base.html
+title: Home
+tags:
+- page
+---
+
+<div class="map" id="map" data-src="{{ '/brouwers.json' | url }}">
+</div>
+
+<div class="bg-light">
+    <div class="container py-3 text-center">
+        <img src="{{ "/images/steundebrouwer.png" | url }}" alt="Steun de brouwer">
+    </div>
+</div>
+<div class="container py-3">
+    <h1>brouwers</h1>
+    <a href="#" class="btn btn-outline-secondary js-share" data-title="brouwers" data-text="brouwers Zoetermeer" aria-label="Share this page">
+        <i class="fa fa-share-alt"></i> Deel deze pagina
+    </a>
+    <hr>
+    <div class="row">
+        {%- for p in collections.brouwer -%}
+            <div class="col-md-4 py-3">
+                <a href="{{ p.url | url }}" class="d-block">
+                    <div class="embed-responsive embed-responsive-16by9">
+                        {% if p.data.image %}
+                            <div class="embed-responsive-item img-contain" style="background-image: url({{ p.data.image | url }});"></div>
+                        {% else %}
+                            <div class="embed-responsive-item img-contain bg-light"></div>
+                        {% endif %}
+                    </div>
+                </a>
+                <hr>
+                <h4 class="entry-title">
+                    {{ p.data.title }}
+                </h4>
+                {% from "macros/tags.html" import tagList %}
+                {{ tagList(p.data.tags, '#map') }}
+            </div>
+        {%- endfor -%}
+    </div>
+</div>

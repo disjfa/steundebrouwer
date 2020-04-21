@@ -1,0 +1,39 @@
+{
+  "name": "steundebrouwer",
+  "version": "0.1.0",
+  "description": "Website #steundebrouwer",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm-run-all --parallel dev:*",
+    "favicon": "gulp",
+    "dev:eleventy": "ELEVENTY_ENV=development eleventy --serve --quiet --watch",
+    "dev:encore": "encore dev --watch",
+    "prod:eleventy": "ELEVENTY_ENV=production eleventy",
+    "prod:encore": "encore production",
+    "deploy": "npm-run-all prod:encore prod:eleventy gh-pages",
+    "gh-pages": "gh-pages -d dist"
+  },
+  "author": "disjfa",
+  "license": "MIT",
+  "devDependencies": {
+    "@11ty/eleventy": "^0.10.0",
+    "node-sass": "^4.13.1",
+    "sass-loader": "^7.3.1"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.13.0",
+    "@symfony/webpack-encore": "^0.29.1",
+    "axios": "^0.19.2",
+    "bootstrap": "^4.3.1",
+    "fancy-log": "^1.3.3",
+    "favicons": "^6.0.0",
+    "gh-pages": "^2.2.0",
+    "gulp": "^4.0.2",
+    "jquery": "^3.4.1",
+    "leaflet": "^1.5.1",
+    "npm-run-all": "^4.1.5",
+    "popper.js": "^1.16.1",
+    "ryoko-headers": "^0.1.3",
+    "share-api-polyfill": "^1.0.7"
+  }
+}

@@ -76,7 +76,7 @@ function setBounds() {
     if (latitude && longtitude && inCurrentTag(tags)) {
 
       let m = L.marker([latitude, longtitude])
-        .bindPopup(`${marker.name}<br><a href="${marker.permalink}">Bekijk resturant</a>`);
+        .bindPopup(`${marker.name}<br><a href="${marker.permalink}">Bekijk brouwer</a>`);
 
       markers.push(m);
       bounds.push(L.latLng(latitude, longtitude));

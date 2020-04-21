@@ -6,7 +6,7 @@
 {% include 'components/navbar.html' %}
 <div class="container">
     {% if closed %}
-        <div class="alert alert-warning">
+        <div class="alert alert-warning mt-3">
             Dit brouwer is gesloten.
         </div>
     {% endif %}
@@ -27,6 +27,12 @@
                 </a>
             </div>
             {{ content | safe }}
+            {% if link %}
+                <a href="{{ link }}" class="btn btn-outline-primary">
+                    <i class="fa fa-fw fa-info-circle"></i>
+                    Bekijk informatie
+                </a>
+            {% endif %}
         </div>
         <div class="col-12 col-lg-7 ">
             <div class="map" id="map" data-name="{{ title }}" data-permalink="{{ page.url | url }}" data-latitude="{{ latitude }}" data-longtitude="{{ longtitude }}"></div>

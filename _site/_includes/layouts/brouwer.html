@@ -4,28 +4,26 @@
     {% include 'components/head.html' %}
 <body>
 {% include 'components/navbar.html' %}
-<div class="container">
+<div class="container py-3">
     {% if closed %}
-        <div class="alert alert-warning mt-3">
+        <div class="alert alert-warning">
             Dit brouwer is gesloten.
         </div>
     {% endif %}
     <div class="row">
-        <div class="col-12 col-lg-5 py-3">
-            {% if image %}
-                <img src="{{ image | url }}" alt="{{ title }}" class="img-fluid">
+        <div class="col-12 col-lg-7 order-lg-2">
+            <h1>
+                <div class="float-right">
+                    <a href="#" class="btn btn-outline-secondary js-share" data-title="{{ title }}" data-text="brouwers Zoetermeer" aria-label="Share this page">
+                        <i class="fa fa-share-alt"></i>
+                    </a>
+                </div>
+                {{ title }}
+            </h1>
+            <p>{{ intro }}</p>
+            {% if image_info %}
+                <img src="{{ image_info | url }}" alt="{{ title }}" class="img-fluid">
             {% endif %}
-            <h1>{{ title }}</h1>
-            <div>
-                {% from "macros/tags.html" import tagList %}
-                {{ tagList(tags) }}
-            </div>
-            <hr>
-            <div class="float-right">
-                <a href="#" class="btn btn-outline-secondary js-share" data-title="{{ title }}" data-text="brouwers Zoetermeer" aria-label="Share this page">
-                    <i class="fa fa-share-alt"></i>
-                </a>
-            </div>
             {{ content | safe }}
             {% if link %}
                 <a href="{{ link }}" class="btn btn-outline-primary">
@@ -34,9 +32,18 @@
                 </a>
             {% endif %}
         </div>
-        <div class="col-12 col-lg-7 ">
-            <div class="map" id="map" data-name="{{ title }}" data-permalink="{{ page.url | url }}" data-latitude="{{ latitude }}" data-longtitude="{{ longtitude }}"></div>
+        <div class="col-12 col-lg-5 py-3">
+            {% if image %}
+                <img src="{{ image | url }}" alt="{{ title }}" class="img-fluid">
+            {% endif %}
+            <div>
+                {% from "macros/tags.html" import tagList %}
+                {{ tagList(tags) }}
+            </div>
+            <hr>
+            <div class="map-sm" id="map" data-name="{{ title }}" data-permalink="{{ page.url | url }}" data-latitude="{{ latitude }}" data-longtitude="{{ longtitude }}"></div>
         </div>
+
     </div>
 </div>
 {% if website or facebook or instagram or twitter %}

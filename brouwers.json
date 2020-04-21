@@ -1,16 +1,16 @@
 
 {"brouwers": [{
-    "name": "Kompaan",
-    "permalink": "/steundebrouwer/brouwer/kompaan/",
-    "image": "/images/kompaan.jpg",
-    "latitude": "52.066769",
-    "longtitude": "4.34668",
-    "tags": [{"name": "brouwer"}]
-    },{
     "name": "Maximus Brouwerij",
     "permalink": "/steundebrouwer/brouwer/maximusbrouwerij/",
     "image": "/images/maximusbrouwerij.jpg",
     "latitude": "52.088492",
     "longtitude": "5.04592",
+    "tags": [{"name": "brouwer"}]
+    },{
+    "name": "Kompaan",
+    "permalink": "/steundebrouwer/brouwer/kompaan/",
+    "image": "/images/kompaan.jpg",
+    "latitude": "52.066769",
+    "longtitude": "4.34668",
     "tags": [{"name": "brouwer"}]
     }]}

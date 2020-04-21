@@ -3,10 +3,10 @@
     "app": {
       "js": [
         "/steundebrouwer/build/runtime.8a859629.js",
-        "/steundebrouwer/build/app.fe5ea73b.js"
+        "/steundebrouwer/build/app.3fa58a33.js"
       ],
       "css": [
-        "/steundebrouwer/build/app.400f2b4e.css"
+        "/steundebrouwer/build/app.3083b06c.css"
       ]
     }
   }

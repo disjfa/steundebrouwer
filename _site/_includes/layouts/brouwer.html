@@ -39,6 +39,37 @@
         </div>
     </div>
 </div>
+{% if website or facebook or instagram or twitter %}
+    <div class="bg-light">
+        <div class="container py-3 bg-light">
+            <h4>Social</h4>
+            {% if website %}
+                <a href="{{ website }}" class="btn btn-outline-primary">
+                    <i class="fa fa-home"></i>
+                    website
+                </a>
+            {% endif %}
+            {% if facebook %}
+                <a href="{{ facebook }}" class="btn btn-outline-primary">
+                    <i class="fab fa-facebook"></i>
+                    facebook
+                </a>
+            {% endif %}
+            {% if instagram %}
+                <a href="{{ instagram }}" class="btn btn-outline-primary">
+                    <i class="fab fa-instagram"></i>
+                    instagram
+                </a>
+            {% endif %}
+            {% if twitter %}
+                <a href="{{ twitter }}" class="btn btn-outline-primary">
+                    <i class="fab fa-twitter"></i>
+                    twitter
+                </a>
+            {% endif %}
+        </div>
+    </div>
+{% endif %}
 {% include 'components/footer.html' %}
 {%- for js in encore.app.js -%}
     <script src="{{ js }}"></script>
